@@ -44,6 +44,8 @@ import { cn } from '@/utils'
 import { customAlphabet } from 'nanoid'
 import { entries, isNull } from 'lodash-es'
 
+const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME ?? 'Gemini Pembroke'
+
 type Props = {
   id: string
   title: string
@@ -370,7 +372,7 @@ function AppSidebar() {
     <Sidebar>
       <SidebarHeader>
         <div className="flex justify-between p-2 pb-0">
-          <span className="text-lg font-semibold text-red-400">Gemini Next Chat</span>
+          <span className="text-lg font-semibold text-red-400">{APP_NAME}</span>
           <Button
             className="h-8 w-8 [&_svg]:size-5"
             variant="ghost"
